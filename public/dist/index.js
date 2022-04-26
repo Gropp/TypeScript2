@@ -10,6 +10,16 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/classes/candidato.ts":
+/*!**********************************!*\
+  !*** ./src/classes/candidato.ts ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Candidato\": () => (/* binding */ Candidato)\n/* harmony export */ });\nclass Candidato {\n    // esse metodo de declarar as variaveis e depois chamar no construtor da para simplificar\n    //nome:string;\n    //idade:number|string;\n    // colocando o public no construtor é muito mais funcional\n    // se nao puser public as variaveis nao sao acessiveis\n    constructor(nome, idade) {\n        this.nome = nome;\n        this.idade = idade;\n        // elimina essas cargas colocando o public no construtor\n        //this.nome = nome;\n        //this.idade = idade;\n    }\n    info() {\n        return `meu nome é ${this.nome} e minha idade é de ${this.idade}`;\n    }\n}\n\n\n//# sourceURL=webpack://typescript2/./src/classes/candidato.ts?");
+
+/***/ }),
+
 /***/ "./src/constantes.ts":
 /*!***************************!*\
   !*** ./src/constantes.ts ***!
@@ -26,7 +36,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _constantes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./constantes */ \"./src/constantes.ts\");\n\nconsole.log(_constantes__WEBPACK_IMPORTED_MODULE_0__.name);\n\n\n//# sourceURL=webpack://typescript2/./src/index.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _constantes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./constantes */ \"./src/constantes.ts\");\n/* harmony import */ var _classes_candidato__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./classes/candidato */ \"./src/classes/candidato.ts\");\n//importa uma constante\n\n//importa uma classe\n\nconst candidato = new _classes_candidato__WEBPACK_IMPORTED_MODULE_1__.Candidato(_constantes__WEBPACK_IMPORTED_MODULE_0__.name, 49);\n// mostra a propiredade info\nconsole.log(candidato.info());\n// mostra o conteudo da classe\nconsole.log(candidato);\n\n\n//# sourceURL=webpack://typescript2/./src/index.ts?");
 
 /***/ })
 
