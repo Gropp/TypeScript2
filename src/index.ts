@@ -1,10 +1,17 @@
-//importa uma constante
-import {name} from './constantes';
-//importa uma classe
-import {Candidato} from './classes/candidato';
+//carrega o tag form e a
+// os elementos nao os ids
+// a constante form pode receber o HTMLELement ou null
+// para tirar essa opcao de null, se coloca uma exclamacao no final
+// objetos nulos dao problema com o metodo link.addEventListener.
+// vc chamando as ancoras tambem consolida que o elemento selecionado é com certeza um elemento HTML
+const form = document.querySelector('form')!;
+const link = document.querySelector('a')!;
 
-const candidato = new Candidato(name, 49);
-// mostra a propiredade info
-console.log(candidato.info());
-// mostra o conteudo da classe
-console.log(candidato);
+//uma forma de fazer essa classificacao com ids e classes das tags, da para declara da seguinte forma:
+//deixando clara essa relacao do elemento com um html elemento, as funcionalidades do DOM nao terao
+//nenhum tipo de erro
+const alias = document.querySelector('my-link') as HTMLAnchorElement;
+
+link.addEventListener('click', () => {
+    console.log('click');
+});
