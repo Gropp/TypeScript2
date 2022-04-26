@@ -11,7 +11,11 @@
 
     <!-- carrego o arquivo compilado em JS -->
     <!-- tem que descrever o type para funcionar os modulos -->
-    <script type="module" src="./dist/index.js"></script>
+    <!-- <script type="module" src="./dist/index.js"></script> -->
+    <!-- como instalamos o package nao precisa mais colocar o module -->
+    <!-- para que os modulos sejam vistos entre arquivos -->
+    <!-- resolve o problema do edge MS -->
+    <script src="./dist/index.js"></script>
     <!-- <script type="module" src="./dist/mapkey.js"></script> -->
 </body>
 </html>
